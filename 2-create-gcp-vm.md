@@ -9,3 +9,9 @@ gcp_cred_file: [path of your service account json]
 ```
 $> ansible-playbook create-vm
 ```
+
+# Find google image list
+1. for gcp_compute_disk.source_image can find with the following command
+```
+$> gcloud compute images list --uri
+```
