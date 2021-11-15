@@ -20,4 +20,7 @@ $> gcloud compute images list --uri
 Once you create GCP instance with ansible,
 ansible may automatically create ssh from your local machine to created GCP instance.
 So if you run this script twice then get the same IP from GCP, the ssh may not work.
-1. to fix this problem kindly delete the row the contain GCP IP on ~/.ssh/known_hosts
+1. to fix this problem kindly delete the row the contain GCP IP on 
+```
+~/.ssh/known_hosts
+```
