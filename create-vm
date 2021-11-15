@@ -13,7 +13,7 @@
       gcp_compute_disk:
          name: 'disk-instance'
          size_gb: 50
-         source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts'
+         source_image: 'projects/centos-cloud/global/images/centos-8-v20211105'
          zone: "{{ zone }}"
          project: "{{ gcp_project }}"
          auth_kind: "{{ gcp_cred_kind }}"
@@ -61,3 +61,8 @@
 
     - name: Add host to groupname
       add_host: hostname={{ address.address }} groupname=new_instances
+      
+- name: Manage new instances
+  hosts: new_instances
+  connection: ssh
+  become: True
