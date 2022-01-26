@@ -2,8 +2,13 @@
 tutorial for start using ansible on google cloud platform (gcp)
 
 # remind
-must login to gcloud before continue working
+after create vm, must login to gcloud and ssh to it before continue working
 
 ```
 gcloud auth login
+```
+
+shell to gcp vm command
+```
+gcloud compute ssh [vm-name]
 ```
